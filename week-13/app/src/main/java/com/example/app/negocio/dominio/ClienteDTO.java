@@ -5,6 +5,7 @@ import com.example.app.negocio.excecao.NomeMenorCincoCaracteresException;
 import com.example.app.negocio.excecao.ClienteNaoDefinidoException;
 import com.example.app.negocio.validador.FabricaValidadorTelefone;
 import com.example.app.persistencia.Cliente;
+import com.example.app.persistencia.Pais;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +29,7 @@ public class ClienteDTO {
     private int idade;
     private String telefone;
     private double limiteCredito;
-    private PaisDTO pais;
+    private Pais pais;
 
       public static ClienteDTO DTOFromEntity(Cliente cliente) {
         return ClienteDTO.builder()
@@ -36,6 +37,7 @@ public class ClienteDTO {
                 .nome(cliente.getNome())
                 .telefone(cliente.getTelefone())
                 .limiteCredito(cliente.getLimiteCredito())
+                .pais(cliente.getPais())
                 .build();
     }
     
@@ -54,6 +56,7 @@ public class ClienteDTO {
                 .nome(cliente.getNome())
                 .telefone(cliente.getTelefone())
                 .limiteCredito(cliente.getLimiteCredito())
+                .pais(cliente.getPais())
                 .build();
     }
     
@@ -72,6 +75,7 @@ public class ClienteDTO {
                 .nome(cliente.getNome())
                 .telefone(cliente.getTelefone())
                 .limiteCredito(cliente.getLimiteCredito())
+                .pais(cliente.getPais())
                 .build();
     }
     
@@ -81,6 +85,7 @@ public class ClienteDTO {
                 .nome(cliente.getNome())
                 .telefone(cliente.getTelefone())
                 .limiteCredito(cliente.getLimiteCredito())
+                .pais(cliente.getPais())
                 .build();
     } 
 }
